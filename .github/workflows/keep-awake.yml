@@ -1,0 +1,18 @@
+name: Keep the site awake
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/keep-awake.mjs
+        env:
+          RENDER_URL: ${{ vars.RENDER_URL }}
