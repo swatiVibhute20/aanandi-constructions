@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  --color-parchment: #fbf3e0;
+  --color-parchment-deep: #f4e7c8;
+  --color-kumkum: #a4161a;
+  --color-kumkum-dark: #7c1013;
+  --color-haldi: #e9a914;
+  --color-navy: #14213d;
+  --color-terracotta: #b5532f;
+  --color-leaf: #3f6b3a;
+  --color-ink: #2b2118;
+  --font-sans: "Mukta", "Nirmala UI", "Segoe UI", sans-serif;
+  --font-display: "Yatra One", "Eczar", serif;
+  --font-heading: "Eczar", "Tiro Devanagari Marathi", serif;
+  --font-accent: "Tiro Devanagari Marathi", "Eczar", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-parchment);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--color-parchment);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+p,
+li,
+label,
+button,
+input,
+textarea,
+select,
+a {
+  line-height: 1.7;
+}
+
+::selection {
+  background: var(--color-haldi);
+  color: var(--color-navy);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-kumkum);
+  outline-offset: 3px;
+}
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-navy) 14%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-navy) 14%, transparent) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.blueprint-grid-light {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, #fbf3e0 28%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, #fbf3e0 28%, transparent) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.paithani-frame {
+  background:
+    linear-gradient(var(--color-parchment), var(--color-parchment)) padding-box,
+    repeating-linear-gradient(
+      90deg,
+      #a4161a 0 10px,
+      #e9a914 10px 14px,
+      #14213d 14px 22px,
+      #f4e7c8 22px 30px
+    )
+    border-box;
+  border: 3px solid transparent;
+}
+
+.field {
+  min-height: 3rem;
+  width: 100%;
+  border-radius: 0.85rem;
+  border: 1.5px solid color-mix(in srgb, var(--color-navy) 28%, transparent);
+  background: #fffdf8;
+  padding: 0.7rem 0.95rem;
+  font: inherit;
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+
+textarea.field {
+  min-height: 8.5rem;
+  resize: vertical;
+}
+
+.field:focus {
+  border-color: var(--color-kumkum);
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-haldi) 70%, transparent);
+}
+
+#estimator,
+#reviews,
+[id^="service-"],
+[id^="project-"] {
+  scroll-margin-top: 5.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
