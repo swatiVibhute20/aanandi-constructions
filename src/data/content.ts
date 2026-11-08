@@ -99,6 +99,4 @@ export const steps: WorkStep[] = [
 
 export const serviceAreas: L10n[] = [
   { mr: "कोल्हापूर", en: "Kolhapur" },
-  { mr: "सांगली", en: "Sangli" },
-  { mr: "मिरज", en: "Miraj" },
 ];
