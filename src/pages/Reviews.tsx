@@ -1,34 +1,24 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import { Button } from "../components/Button.tsx";
 import { PageHero } from "../components/PageHero.tsx";
 import { Seo } from "../components/Seo.tsx";
-import { testimonials } from "../data/testimonials.ts";
 import { useI18n } from "../i18n/LanguageContext.tsx";
 import { readReviews, submitReview } from "../lib/api.ts";
-import { tx } from "../lib/text.ts";
 import type { ProjectCategory, StoredReview } from "../types.ts";
 
 const filters = ["all", "residential", "industrial", "agricultural"] as const;
 type Filter = (typeof filters)[number];
-
-type ReviewCard = {
-  id: string;
-  category: ProjectCategory;
-  name: string;
-  place: string;
-  quote: string;
-  createdAt: string;
-};
 
 function isCategory(value: string): value is ProjectCategory {
   return value === "residential" || value === "industrial" || value === "agricultural";
 }
 
 export default function ReviewsPage() {
-  const { t, lang } = useI18n();
+  const { t } = useI18n();
   const [filter, setFilter] = useState<Filter>("all");
   const [mine, setMine] = useState<StoredReview[]>([]);
+  const [loaded, setLoaded] = useState(false);
   const [name, setName] = useState("");
   const [place, setPlace] = useState("");
   const [category, setCategory] = useState<ProjectCategory | "">("");
@@ -36,33 +26,17 @@ export default function ReviewsPage() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [saved, setSaved] = useState(false);
 
-  const cards = useMemo(() => {
-    const added: ReviewCard[] = mine.map((row) => ({
-      id: row.id,
-      category: row.category,
-      name: row.name,
-      place: row.place,
-      quote: row.quote,
-      createdAt: row.createdAt,
-    }));
-    const seeded: ReviewCard[] = testimonials.map((row) => ({
-      id: row.id,
-      category: row.category,
-      name: tx(row.name, lang),
-      place: tx(row.place, lang),
-      quote: tx(row.quote, lang),
-      createdAt: "",
-    }));
-    return [...added, ...seeded];
-  }, [mine, lang]);
-
-  const visible = filter === "all" ? cards : cards.filter((row) => row.category === filter);
+  const visible = filter === "all" ? mine : mine.filter((row) => row.category === filter);
 
   useEffect(() => {
     let active = true;
-    readReviews().then((rows) => {
-      if (active) setMine(rows);
-    });
+    readReviews()
+      .then((rows) => {
+        if (active) setMine(rows);
+      })
+      .finally(() => {
+        if (active) setLoaded(true);
+      });
     return () => {
       active = false;
     };
@@ -178,7 +152,7 @@ export default function ReviewsPage() {
               );
             })}
           </div>
-          {visible.length === 0 ? <p className="mt-8 text-lg">{t.reviews.empty}</p> : null}
+          {loaded && visible.length === 0 ? <p className="mt-8 text-lg">{t.reviews.empty}</p> : null}
           <ul className="mt-6 grid gap-4">
             {visible.map((row) => (
               <li key={row.id} className="rounded-3xl border border-navy/10 bg-parchment p-5">

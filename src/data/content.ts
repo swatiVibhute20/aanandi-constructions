@@ -2,10 +2,10 @@ import { site } from "../config/site.ts";
 import type { CounterStat, Founder, L10n, Reason, WorkStep } from "../types.ts";
 
 export const counters: CounterStat[] = [
-  { id: "projects", value: 86, label: { mr: "पूर्ण प्रकल्प", en: "Projects completed" } },
+  { id: "projects", value: 5, label: { mr: "पूर्ण प्रकल्प", en: "Projects completed" } },
   { id: "years", value: 2, label: { mr: "वर्षांचा अनुभव", en: "Years of experience" } },
-  { id: "clients", value: 74, label: { mr: "समाधान झालेली कुटुंबं", en: "Happy clients" } },
-  { id: "sheds", value: 41, label: { mr: "शेड आणि गोदामं", en: "Sheds built" } },
+  { id: "clients", value: 5, label: { mr: "समाधान झालेली कुटुंबं", en: "Happy clients" } },
+  { id: "sheds", value: 3, label: { mr: "शेड आणि गोदामं", en: "Sheds built" } },
 ];
 
 export const reasons: Reason[] = [

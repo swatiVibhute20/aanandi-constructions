@@ -2,8 +2,7 @@ import { counters, founder, reasons, serviceAreas, steps } from "../data/content
 import { estimatorWorks } from "../data/estimatorRates.ts";
 import { projects } from "../data/projects.ts";
 import { services } from "../data/services.ts";
-import { testimonials } from "../data/testimonials.ts";
-import type { EnquiryInput, StoredEnquiry, StoredReview } from "../types.ts";
+import type { EnquiryInput, StoredEnquiry, StoredReview, Testimonial } from "../types.ts";
 
 /**
  * Page copy, projects and services stay in the repo.
@@ -12,7 +11,7 @@ import type { EnquiryInput, StoredEnquiry, StoredReview } from "../types.ts";
 
 let servicesP: Promise<typeof services> | undefined;
 let projectsP: Promise<typeof projects> | undefined;
-let testimonialsP: Promise<typeof testimonials> | undefined;
+let testimonialsP: Promise<Testimonial[]> | undefined;
 let worksP: Promise<typeof estimatorWorks> | undefined;
 
 export function getServices() {
@@ -29,8 +28,26 @@ export function getFeaturedProjects() {
   return getProjects().then((rows) => rows.filter((row) => row.featured));
 }
 
+const reviewWork = {
+  residential: { mr: "घरे", en: "Residential" },
+  industrial: { mr: "औद्योगिक", en: "Industrial" },
+  agricultural: { mr: "शेती", en: "Agricultural" },
+} as const;
+
+function reviewToTestimonial(row: StoredReview): Testimonial {
+  const line = (value: string) => ({ mr: value, en: value });
+  return {
+    id: row.id,
+    category: row.category,
+    name: line(row.name),
+    place: line(row.place),
+    work: reviewWork[row.category],
+    quote: line(row.quote),
+  };
+}
+
 export function getTestimonials() {
-  testimonialsP ??= Promise.resolve(testimonials);
+  testimonialsP ??= readReviews().then((rows) => rows.map(reviewToTestimonial));
   return testimonialsP;
 }
 
