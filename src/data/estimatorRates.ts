@@ -1,7 +1,7 @@
 import type { EstimatorAddOn, EstimatorWork } from "../types.ts";
 
 /**
- * Placeholder rates for Kolhapur, Sangli and Miraj, in INR.
+ * Placeholder rates for Kolhapur, in INR.
  * Adjust every figure to current local market rates before anyone is quoted.
  * Houses and sheds are per square foot. Compound is per running foot of wall
  * about 5 feet high. The gate is not included.

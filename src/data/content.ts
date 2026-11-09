@@ -52,8 +52,8 @@ export const founder: Founder = {
   },
   paragraphs: [
     {
-      mr: "इंजि. राजवर्धन इंगवले पेठ वडगाव, कोल्हापूर येथील सिव्हिल इंजिनिअर आहेत. त्यांना २ वर्षांचा अनुभव आहे. काम घरं, शेड, गोदामं आणि डागडुजी — कोल्हापूर, सांगली आणि मिरज परिसरात.",
-      en: "Er. Rajvardhan Ingawale is a civil engineer in Peth Vadgaon, Kolhapur, with 2 years of experience. The work is houses, sheds, godowns and repairs around Kolhapur, Sangli and Miraj.",
+      mr: "इंजि. राजवर्धन इंगवले पेठ वडगाव, कोल्हापूर येथील सिव्हिल इंजिनिअर आहेत. त्यांना २ वर्षांचा अनुभव आहे. काम घरं, शेड, गोदामं आणि डागडुजी — कोल्हापूर परिसरात.",
+      en: "Er. Rajvardhan Ingawale is a civil engineer in Peth Vadgaon, Kolhapur, with 2 years of experience. The work is houses, sheds, godowns and repairs around Kolhapur.",
     },
     {
       mr: "ते स्वतः साइट पाहतात. काम सुरू होण्याआधी दर लिहून दिला जातो.",

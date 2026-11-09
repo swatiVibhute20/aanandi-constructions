@@ -70,7 +70,7 @@ export function Seo({ title, description, path }: SeoProps) {
         postalCode: "416112",
         addressCountry: "IN",
       },
-      areaServed: "Kolhapur, Sangli and Miraj, Maharashtra",
+      areaServed: "Kolhapur, Maharashtra",
     });
   }, [title, description, path, lang]);
 

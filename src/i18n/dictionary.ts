@@ -9,13 +9,13 @@ const mr = {
   meta: {
     homeTitle: "आनंदी Constructions · तुमचं स्वप्न, आमचा पाया.",
     homeDesc:
-      "कोल्हापूर, सांगली आणि मिरज परिसरातील सिव्हिल इंजिनिअर. घरं, शेड, गोदामं आणि जुनी घरं. दर आधी कागदावर.",
+      "कोल्हापूर परिसरातील सिव्हिल इंजिनिअर. घरं, शेड, गोदामं आणि जुनी घरं. दर आधी कागदावर.",
     aboutTitle: "आमच्याबद्दल · आनंदी Constructions",
-    aboutDesc: "इंजि. राजवर्धन इंगवले — कोल्हापूर, सांगली आणि मिरज परिसरात २ वर्षांचा अनुभव.",
+    aboutDesc: "इंजि. राजवर्धन इंगवले — कोल्हापूर परिसरात २ वर्षांचा अनुभव.",
     servicesTitle: "सेवा · आनंदी Constructions",
     servicesDesc: "घर बांधकाम, शेड, गोदाम, जुनी घरं, कंपाउंड, आरसीसी आणि साइट सल्ला.",
     projectsTitle: "प्रकल्प · आनंदी Constructions",
-    projectsDesc: "कोल्हापूर, सांगली आणि मिरज येथील काही कामं.",
+    projectsDesc: "कोल्हापूर येथील काही कामं.",
     reviewsTitle: "अभिप्राय · आनंदी Constructions",
     reviewsDesc: "घर, शेड आणि गोदाम यांचे अभिप्राय. स्वतःचा अनुभव जोडा.",
     contactTitle: "संपर्क · आनंदी Constructions",
@@ -52,7 +52,7 @@ const mr = {
   hero: {
     kicker: "आधी कागदावर. मग विटेत.",
     title: "तुमचं स्वप्न, आमचा पाया.",
-    sub: "कोल्हापूर, सांगली आणि मिरज परिसरात घरं, शेड, गोदामं आणि जुन्या घरांची डागडुजी. दर आधी कागदावर, मग कामावर.",
+    sub: "कोल्हापूर परिसरात घरं, शेड, गोदामं आणि जुन्या घरांची डागडुजी. दर आधी कागदावर, मग कामावर.",
     ctaProjects: "प्रकल्प",
     ctaReview: "अभिप्राय",
     since: "स्थापना २०२४",
@@ -74,7 +74,7 @@ const mr = {
   projects: {
     eyebrow: "प्रकल्प",
     title: "अलीकडची काही कामं",
-    lead: "कोल्हापूर, सांगली आणि मिरज परिसरातील घरं, शेड आणि गोदामं.",
+    lead: "कोल्हापूर परिसरातील घरं, शेड आणि गोदामं.",
     seeAll: "सर्व प्रकल्प",
     all: "सगळे",
     residential: "घरे",
@@ -123,7 +123,7 @@ const mr = {
   estimator: {
     eyebrow: "खर्चाचा अंदाज",
     title: "साधा हिशोब, लपवलेला नाही",
-    lead: "२०२६ च्या कोल्हापूर, सांगली आणि मिरज परिसरातील ढोबळ दर. खिडक्या, फरशी आणि पत्र्याचा प्रकार बांधणीनुसार बदलतो. हे अंतिम कोट नाही.",
+    lead: "२०२६ च्या कोल्हापूर परिसरातील ढोबळ दर. खिडक्या, फरशी आणि पत्र्याचा प्रकार बांधणीनुसार बदलतो. हे अंतिम कोट नाही.",
     work: "कामाचा प्रकार",
     tier: "बांधणी",
     quantity: "माप",
@@ -168,7 +168,7 @@ const mr = {
     stepsTitle: "काम कसं चालतं",
     areasEyebrow: "परिसर",
     areasTitle: "इथपर्यंत येतो",
-    areasLead: "या तालुक्यांबाहेर काम असेल तर आधी फोन करा. अंतर दरात धरतो, लपवत नाही.",
+    areasLead: "कोल्हापूरबाहेर काम असेल तर आधी फोन करा. अंतर दरात धरतो, लपवत नाही.",
     valuesTitle: "तीन गोष्टी सोडत नाही",
     values: [
       { title: "स्पष्ट बोलणं", body: "नको असेल ते नको म्हणतो. आवडेल म्हणून होकार देत नाही." },
@@ -262,7 +262,7 @@ const mr = {
     lead: "पत्ता तपासा, किंवा मुख्यपृष्ठावर परत या.",
   },
   footer: {
-    blurb: "कोल्हापूर, सांगली आणि मिरज परिसरात घरं, शेड आणि गोदामं. दर स्पष्ट, काम वेळेत.",
+    blurb: "कोल्हापूर परिसरात घरं, शेड आणि गोदामं. दर स्पष्ट, काम वेळेत.",
     links: "पाने",
     contact: "संपर्क",
     rights: "सर्व हक्क राखीव.",
@@ -287,13 +287,13 @@ const en: typeof mr = {
   meta: {
     homeTitle: "Aanandi Constructions · Your Dream. Our Foundation.",
     homeDesc:
-      "A woman civil engineer for Kolhapur, Sangli and Miraj. Houses, sheds, godowns and old-home repairs. The rate goes on paper first.",
+      "A woman civil engineer for Kolhapur. Houses, sheds, godowns and old-home repairs. The rate goes on paper first.",
     aboutTitle: "About · Aanandi Constructions",
-    aboutDesc: "Er. Rajvardhan Ingawale — 2 years building houses and sheds around Kolhapur, Sangli and Miraj.",
+    aboutDesc: "Er. Rajvardhan Ingawale — 2 years building houses and sheds around Kolhapur.",
     servicesTitle: "Services · Aanandi Constructions",
     servicesDesc: "Houses, sheds, godowns, old homes, compound walls, RCC and site advice.",
     projectsTitle: "Projects · Aanandi Constructions",
-    projectsDesc: "Recent work in Kolhapur, Sangli and Miraj.",
+    projectsDesc: "Recent work in Kolhapur.",
     reviewsTitle: "Reviews · Aanandi Constructions",
     reviewsDesc: "Reviews of houses, sheds and godowns. Add your own.",
     contactTitle: "Contact · Aanandi Constructions",
@@ -330,7 +330,7 @@ const en: typeof mr = {
   hero: {
     kicker: "On paper first. Then in brick.",
     title: "Your Dream. Our Foundation.",
-    sub: "Houses, sheds, godowns and repairs for old homes around Kolhapur, Sangli and Miraj. The rate goes on paper before anyone picks up a brick.",
+    sub: "Houses, sheds, godowns and repairs for old homes around Kolhapur. The rate goes on paper before anyone picks up a brick.",
     ctaProjects: "Projects",
     ctaReview: "Review",
     since: "Est. 2024",
@@ -352,7 +352,7 @@ const en: typeof mr = {
   projects: {
     eyebrow: "Projects",
     title: "A few recent jobs",
-    lead: "Houses, sheds and godowns across Kolhapur, Sangli and Miraj.",
+    lead: "Houses, sheds and godowns across Kolhapur.",
     seeAll: "All projects",
     all: "All",
     residential: "Residential",
@@ -401,7 +401,7 @@ const en: typeof mr = {
   estimator: {
     eyebrow: "Cost estimator",
     title: "A plain calculation, nothing tucked away",
-    lead: "Rough 2026 rates for Kolhapur, Sangli and Miraj. Windows, flooring and sheet type change with the finish. This is not a final quote.",
+    lead: "Rough 2026 rates for Kolhapur. Windows, flooring and sheet type change with the finish. This is not a final quote.",
     work: "Project type",
     tier: "Quality",
     quantity: "Built-up area",
@@ -446,7 +446,7 @@ const en: typeof mr = {
     stepsTitle: "The order of work",
     areasEyebrow: "The belt",
     areasTitle: "How far we come",
-    areasLead: "If the job is outside these talukas, call first. Distance goes on the bill, it is not hidden.",
+    areasLead: "If the job is outside Kolhapur, call first. Distance goes on the bill, it is not hidden.",
     valuesTitle: "Three things we do not drop",
     values: [
       { title: "Plain speech", body: "If it should not be done, we say so. We do not nod to be liked." },
@@ -540,7 +540,7 @@ const en: typeof mr = {
     lead: "Check the address, or come back home.",
   },
   footer: {
-    blurb: "Houses, sheds and godowns around Kolhapur, Sangli and Miraj. A clear rate, and the work on time.",
+    blurb: "Houses, sheds and godowns around Kolhapur. A clear rate, and the work on time.",
     links: "Pages",
     contact: "Contact",
     rights: "All rights reserved.",

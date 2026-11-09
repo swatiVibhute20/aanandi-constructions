@@ -1,6 +1,6 @@
 # आनंदी Constructions
 
-UI-only website for a civil engineering practice in Rahuri, Ahilyanagar, Maharashtra. Marathi is the default language. English is available from the navbar.
+UI-only website for a civil engineering practice in Kolhapur, Maharashtra. Marathi is the default language. English is available from the navbar.
 
 ## Scripts
 
